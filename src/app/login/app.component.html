@@ -1,0 +1,25 @@
+<div class="page" [style.background]="color">
+
+  <div class="card">
+
+    <h1>🎨 Colour Preview App</h1>
+    <p>Type any colour name and apply it</p>
+
+    <input 
+      type="text" 
+      placeholder="Enter color (red, blue, green...)" 
+      [(ngModel)]="color"
+    />
+
+    <label class="check">
+      <input type="checkbox" (change)="applyColor($event)">
+      Apply Colour
+    </label>
+
+    <div class="preview" [style.background]="color">
+      Live Preview
+    </div>
+
+  </div>
+
+</div>
